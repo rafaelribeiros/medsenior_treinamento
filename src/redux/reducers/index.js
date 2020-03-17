@@ -1,4 +1,5 @@
 import {combineReducers} from 'redux';
+import {navigationReducer} from './nav';
 
 const initialState = {
   visibilityFilter: 'SINGLE', //ALL
@@ -21,6 +22,7 @@ function auth(state = initialState, action) {
 }
 
 export const reducers = combineReducers({
+  nav: navigationReducer,
   auth: auth,
 });
 
